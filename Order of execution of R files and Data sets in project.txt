@@ -1,0 +1,10 @@
+Order of execution of R files:
+
+1. Project.r (EDA on Temp data set) (temp_us_states.csv, GlobalLandTemperaturesByCountry.csv)
+2.emissions.r (EDA on Emissions Data Set) (CAIT_US_GAS_Emissions.csv)
+3. integration.r (EDA and Integrates Temp and Emissions Data) (generates: integrated.csv)
+4. modeling.r (estimation using regression) (uses: integrated.csv)
+5. Clustering (using Tableau) (uses: integrated.csv)
+6. discretization.r (perform discretization of variables in integrated data set) (uses: integrated.csv)
+7. finalmergedfile.r (merge discretized2.csv and integrated2.csv) and add discretized column for states (generate: final_merged_file.csv)
+8. sampling.r (import final_merged_file.csv and performing sampling and classification using decision trees)

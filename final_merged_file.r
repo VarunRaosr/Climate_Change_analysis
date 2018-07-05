@@ -1,0 +1,6 @@
+integrated1 <- read.csv(file="E:/MS docs/UNCC Docs/KDD/kdd project/integrated2.csv", stringsAsFactors = FALSE)
+discretization1 <- read.csv(file="E:/MS docs/UNCC Docs/KDD/kdd project/discretization2.csv", stringsAsFactors = FALSE)
+integrated_df <- data.frame(integrated1)
+discretization_df <- data.frame(discretization1)
+merged_final_df1 <- merge(integrated_df,discretization_df, by = "sno")
+write.csv(merged_final_df1, file = "E:/MS docs/UNCC Docs/KDD/kdd project/final_merged_file.csv")
